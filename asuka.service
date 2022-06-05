@@ -1,0 +1,15 @@
+[Unit]
+Description=Asuka Discord Bot
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=lloyd
+WorkingDirectory=/opt/bots/discord/asuka
+ExecStart=/opt/bots/discord/asuka/bin/python /opt/bots/discord/asuka/asuka.py
+
+[Install]
+WantedBy=multi-user.target
